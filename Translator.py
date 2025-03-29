@@ -4,6 +4,7 @@ from googletrans.models import Translated
 
 
 # translate georgian text to english
+
 class Translator:
     def __init__(self, source='auto', target='en'):
         self.source = source
@@ -12,5 +13,3 @@ class Translator:
     # translater
     def translate(self, text:typing.Union[str, typing.List[str]]) -> typing.List[Translated]:
         return GoogleTranslator(source=self.source, target=self.target).translate(text)
-
-
